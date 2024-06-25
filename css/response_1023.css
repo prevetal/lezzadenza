@@ -1,0 +1,552 @@
+@media print,
+(max-width: 1023px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction
+    {
+        bottom: 24px;
+
+        padding: 0 24px;
+    }
+
+
+    .swiper-pagination-bullet
+    {
+        width: 16px;
+    }
+
+
+    .swiper-pagination-bullet + .swiper-pagination-bullet
+    {
+        margin-left: 16px !important;
+    }
+
+
+    .swiper-pagination-bullet.active
+    {
+        width: 48px;
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 24px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head .title
+    {
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+
+    .accordion_item .data
+    {
+        padding: 0 48px 24px 0;
+    }
+
+
+
+    /*----------
+        Tabs
+    ----------*/
+    .tabs .btn
+    {
+        min-width: 140px;
+        padding: 11px 19px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    .header_wrap
+    {
+        height: auto !important;
+    }
+
+    header
+    {
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        right: 100%;
+        left: auto;
+
+        width: 325px;
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        margin: 0;
+        padding: 0;
+
+        transition: transform .3s linear;
+
+        background: var(--bg);
+    }
+
+
+    header.show
+    {
+        transform: translateX(100%);
+    }
+
+
+    header .scroll
+    {
+        display: flex;
+        overflow: auto;
+        flex-direction: column;
+
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        padding: 24px 0;
+
+        overscroll-behavior-y: contain;
+    }
+
+
+    header .scroll > *
+    {
+        width: 100%;
+    }
+
+
+    header .logo
+    {
+        display: none;
+    }
+
+
+    header .menu
+    {
+        display: block;
+
+        width: 100%;
+    }
+
+
+    header .menu_item + .menu_item
+    {
+        margin-top: 20px;
+    }
+
+
+    header .menu_item > a
+    {
+        display: inline-block;
+
+        height: auto;
+
+        vertical-align: top;
+    }
+
+
+    header .menu_item .sub_menu,
+    header .menu_item:hover .sub_menu
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        display: none;
+        visibility: hidden;
+
+        width: 100%;
+        padding-bottom: 10px;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    header .menu .sub_menu:before
+    {
+        display: none;
+    }
+
+
+    header .menu_item > a.touch_link + .sub_menu.show
+    {
+        display: block;
+    }
+
+
+    header .menu .sub_menu .row
+    {
+        margin-left: 0;
+    }
+
+
+    header .menu .sub_menu .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    header .data
+    {
+        display: block;
+
+        width: 100%;
+        margin-top: 40px;
+        padding-top: 40px;
+
+        border-top: 1px solid #ededed;
+    }
+
+
+    header .icons
+    {
+        display: none;
+    }
+
+
+
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header
+    {
+        display: block;
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .columns > *.width2of3
+    {
+        width: calc(100% - 36px - var(--form_columns_offset));
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        margin-bottom: 40px;
+    }
+
+
+    .block_head .desc
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*----------------
+        Categories
+    ----------------*/
+    .categories .category .name
+    {
+        font-size: 18px;
+        line-height: 22px;
+
+        padding: 20px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .row > *
+    {
+        width: calc(50% - 2px);
+    }
+
+
+
+    /*---------------
+        Cart info
+    ---------------*/
+    .cart_info .product .thumb
+    {
+        width: 200px;
+        height: 264px;
+    }
+
+
+    .cart_info .product .thumb + div
+    {
+        width: calc(100% - 224px);
+    }
+
+
+    .cart_info .product .buy > * + *
+    {
+        margin-left: 40px;
+    }
+
+
+    .cart_info .product .amount + .price
+    {
+        width: 120px;
+    }
+
+
+    .cart_info .product .delete_btn
+    {
+        width: 26px;
+        height: 26px;
+        margin-left: auto;
+    }
+
+
+
+    /*-------------------
+        Checkout info
+    -------------------*/
+    .checkout_info .form .tooltip .text
+    {
+        right: -24px;
+        left: auto;
+
+        transform: none;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .product .sizes
+    {
+        display: block;
+        overflow: auto;
+
+        padding: 4px;
+
+        text-align: center;
+        white-space: nowrap;
+
+        scroll-padding: 0 4px;
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+    .products .product .sizes::-webkit-scrollbar
+    {
+        display: none !important;
+
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+    .products .product .sizes::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .products .product .sizes .size
+    {
+        font-size: 14px;
+
+        display: inline-block;
+
+        max-width: none;
+        margin: 0;
+
+        vertical-align: top;
+
+        scroll-snap-align: start;
+    }
+
+
+    .products .product .buy_btn,
+    .products .product .favorite_btn
+    {
+        height: 44px;
+    }
+
+
+    .products .product .buy_btn .icon,
+    .products .product .favorite_btn .icon
+    {
+        width: 22px;
+        height: 21px;
+    }
+
+
+
+    /*-------------
+        Banners
+    -------------*/
+    .banners .row > *:not(.mob_small)
+    {
+        width: 100%;
+    }
+
+
+
+    /*----------------
+        Info block
+    ----------------*/
+    .info_blocks .slider
+    {
+        width: 100%;
+    }
+
+
+    .info_blocks .data
+    {
+        order: 2;
+
+        width: 100%;
+        margin-top: 24px;
+    }
+
+
+    .info_blocks .text_block
+    {
+        width: 100%;
+    }
+
+
+
+    /*----------------------
+        LK info - Orders
+    ----------------------*/
+    .lk_info .orders .order .col_status
+    {
+        width: 240px;
+        min-width: 240px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .share
+    {
+        top: 8px;
+        bottom: auto;
+
+        margin: 0;
+    }
+
+
+    .product_info .images
+    {
+        width: 100%;
+        padding-left: 104px;
+    }
+
+
+    .product_info .images .thumbs
+    {
+        width: 80px;
+        height: 630px;
+    }
+
+
+    .product_info .data
+    {
+        width: 100%;
+        margin-top: 48px;
+    }
+
+
+
+    /*------------
+        Videos
+    ------------*/
+    .videos .swiper
+    {
+        padding-bottom: 64px;
+    }
+
+
+    .videos .swiper-slide
+    {
+        width: 480px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        padding-bottom: 100px;
+    }
+
+
+    footer .cont > .col
+    {
+        width: 100%;
+        margin-bottom: 48px;
+    }
+
+
+    footer .copyright
+    {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+
+        margin-top: 0;
+    }
+
+
+    footer .data
+    {
+        width: calc(100% - 248px);
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        width: 532px;
+        padding: 40px 68px;
+    }
+
+
+    .modal .form .submit .btn
+    {
+        margin-left: 24px;
+    }
+
+
+    .modal .recovery
+    {
+        width: calc(100% + 136px);
+        margin: 40px -68px -40px;
+        padding: 20px 68px;
+    }
+}
