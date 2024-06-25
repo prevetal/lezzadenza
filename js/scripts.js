@@ -527,7 +527,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('.overlay').fadeIn(300)
 	})
 
-	$('header > .close, .overlay').click((e) => {
+	$('header .mob_close_btn, .overlay').click((e) => {
 		e.preventDefault()
 
 		$('.mob_header .mob_menu_btn').removeClass('active')

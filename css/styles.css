@@ -3515,7 +3515,7 @@ header.fixed .logo img + img
 }
 
 
-.instagram .more_link
+.instagram .add_btn
 {
     margin-top: 60px;
     padding: 0 40px;
@@ -3524,27 +3524,22 @@ header.fixed .logo img + img
 }
 
 
-.instagram .more_link a
+.instagram .add_btn .btn
 {
     font-size: 12px;
     font-weight: 500;
     line-height: 24px;
 
-    display: inline-block;
-
     padding: 12px 17px;
 
     transition: .2s linear;
-    vertical-align: top;
-    text-decoration: none;
     text-transform: uppercase;
 
-    color: currentColor;
     border: 1px solid #000;
 }
 
 
-.instagram .more_link a:hover
+.instagram .add_btn .btn:hover
 {
     color: #fff;
     background: #000;

@@ -80,7 +80,8 @@
         height: auto !important;
     }
 
-    header
+    header,
+    .top_banner + header.absolute
     {
         position: fixed;
         z-index: 101;
@@ -98,6 +99,7 @@
 
         transition: transform .3s linear;
 
+        color: var(--tetx_color);
         background: var(--bg);
     }
 
