@@ -1006,18 +1006,16 @@ var players = []
 function onYouTubeIframeAPIReady() {
 	var iframes = document.querySelectorAll('.youtube-player')
 
-	iframes.forEach(function(iframe, i) {
-		let videoId = iframe.getAttribute('data-video-id')
-
-		players[i] = new YT.Player(iframe, {
-			videoId: videoId
-		})
+	iframes.forEach(function(iframe) {
+		players.push(new YT.Player(iframe, {
+			videoId: iframe.getAttribute('data-video-id'),
+			playerVars: {
+				'playsinline': 1
+			}
+		}))
 	})
 }
 
-
 function pauseAllVideos() {
-	players.forEach(function(player) {
-		player.pauseVideo()
-	})
+	players.forEach(player => player.stopVideo())
 }
