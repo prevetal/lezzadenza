@@ -892,29 +892,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 		})
 	}
-
-
-	// Youtube
-	var players = []
-
-	function onYouTubeIframeAPIReady() {
-		var iframes = document.querySelectorAll('.youtube-player')
-
-		iframes.forEach(function(iframe, i) {
-			let videoId = iframe.getAttribute('data-video-id')
-
-			players[i] = new YT.Player(iframe, {
-				videoId: videoId
-			})
-		})
-	}
-
-
-	function pauseAllVideos() {
-		players.forEach(function(player) {
-			player.pauseVideo()
-		})
-	}
 })
 
 
@@ -1020,3 +997,27 @@ window.addEventListener('resize', function () {
 		}
 	}
 })
+
+
+
+// Youtube
+var players = []
+
+function onYouTubeIframeAPIReady() {
+	var iframes = document.querySelectorAll('.youtube-player')
+
+	iframes.forEach(function(iframe, i) {
+		let videoId = iframe.getAttribute('data-video-id')
+
+		players[i] = new YT.Player(iframe, {
+			videoId: videoId
+		})
+	})
+}
+
+
+function pauseAllVideos() {
+	players.forEach(function(player) {
+		player.pauseVideo()
+	})
+}
