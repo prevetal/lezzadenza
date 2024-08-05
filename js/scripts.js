@@ -3,6 +3,27 @@ WH = window.innerHeight || document.clientHeight || document.getElementsByTagNam
 BODY = document.getElementsByTagName('body')[0]
 
 
+// Youtube
+var players = []
+
+function onYouTubeIframeAPIReady() {
+	var iframes = document.querySelectorAll('.youtube-player')
+
+	iframes.forEach(function(iframe) {
+		players.push(new YT.Player(iframe, {
+			videoId: iframe.getAttribute('data-video-id'),
+			playerVars: {
+				'playsinline': 1
+			}
+		}))
+	})
+}
+
+function pauseAllVideos() {
+	players.forEach(player => player.stopVideo())
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
 	// Main slider
 	let mainSlider = document.querySelector('.main_slider .swiper')
@@ -997,25 +1018,3 @@ window.addEventListener('resize', function () {
 		}
 	}
 })
-
-
-
-// Youtube
-var players = []
-
-function onYouTubeIframeAPIReady() {
-	var iframes = document.querySelectorAll('.youtube-player')
-
-	iframes.forEach(function(iframe) {
-		players.push(new YT.Player(iframe, {
-			videoId: iframe.getAttribute('data-video-id'),
-			playerVars: {
-				'playsinline': 1
-			}
-		}))
-	})
-}
-
-function pauseAllVideos() {
-	players.forEach(player => player.stopVideo())
-}
