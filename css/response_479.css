@@ -122,6 +122,13 @@
 
 
 
+    .mob_header.fixed .logo img
+    {
+        height: 34px;
+    }
+
+
+
     /*---------------
         Page head
     ---------------*/
@@ -199,7 +206,7 @@
     -----------------*/
     .main_slider .cont
     {
-        min-height: 400px;
+        min-height: 480px;
     }
 
 
@@ -377,6 +384,14 @@
     }
 
 
+    .product_info .images .big
+    {
+        width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+
     .product_info .images .thumbs
     {
         display: none;
@@ -396,6 +411,16 @@
     .product_info .data
     {
         margin-top: 20px;
+    }
+
+
+    .product_info .share
+    {
+        z-index: 10;
+        top: auto;
+        bottom: 100%;
+
+        margin: 0 0 40px;
     }
 
 

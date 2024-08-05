@@ -83,6 +83,12 @@
     }
 
 
+    .pagination .more_btn .btn
+    {
+        padding: 8px 16px;
+    }
+
+
     .pagination .links > * + *
     {
         margin-left: 10px;
@@ -174,6 +180,12 @@
     /*-----------------
         Mob. header
     -----------------*/
+    .top_banner ~ .mob_header.absolute
+    {
+        top: 48px;
+    }
+
+
     .mob_header
     {
         padding: 20px 0;
@@ -257,6 +269,11 @@
     .page_head
     {
         padding: 20px 0;
+    }
+
+    .page_head.mob_hide
+    {
+        display: none;
     }
 
 
@@ -481,9 +498,16 @@
     /*-----------------
         Main slider
     -----------------*/
+    .main_slider
+    {
+        display: none;
+    }
+
+
     .main_slider .cont
     {
-        min-height: 450px;
+        min-height: 550px;
+        padding-top: 80px;
     }
 
 
@@ -500,6 +524,21 @@
 
         width: 100%;
         margin-top: 20px;
+    }
+
+
+    .main_slider .link
+    {
+        padding: 0;
+
+        border: none;
+        border-bottom: 1px solid;
+    }
+
+
+    .mob_main_slider
+    {
+        display: block;
     }
 
 
@@ -692,6 +731,19 @@
     /*-------------------
         Products head
     -------------------*/
+    .products_head .links .swiper
+    {
+        overflow: visible !important;
+    }
+
+
+    .products_head .links .swiper-button-prev,
+    .products_head .links .swiper-button-next
+    {
+        display: none;
+    }
+
+
     .products_head .links a
     {
         font-size: 13px;
@@ -788,6 +840,12 @@
     .about_info .block_head
     {
         margin-bottom: 40px;
+    }
+
+
+    .about_info > .swiper > .swiper-button-prev
+    {
+        right: 80px;
     }
 
 
@@ -953,7 +1011,6 @@
     .product_info .images .thumbs
     {
         width: 68px;
-        height: 448px;
     }
 
 
@@ -1116,6 +1173,12 @@
     /*---------------
         Instagram
     ---------------*/
+    .instagram .swiper-slide
+    {
+        width: 260px;
+    }
+
+
     .instagram .add_btn
     {
         margin-top: 40px;
@@ -1130,6 +1193,32 @@
     .action_form .block_head
     {
         margin-bottom: 32px;
+    }
+
+
+
+    /*----------------
+        Categories
+    ----------------*/
+    .categories .swiper-slide
+    {
+        width: 260px;
+    }
+
+
+
+    /*--------------------
+        Banners slider
+    --------------------*/
+    .banners_slider.mob_hide
+    {
+        display: none;
+    }
+
+
+    .mob_banners_slider
+    {
+        display: block;
     }
 
 

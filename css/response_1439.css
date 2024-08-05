@@ -236,7 +236,7 @@
     -------------------*/
     .products_head .links
     {
-        margin-bottom: 24px;
+        margin-top: 24px;
     }
 
 
@@ -341,7 +341,6 @@
     .product_info .images .thumbs
     {
         width: 88px;
-        height: 558px;
     }
 
 

@@ -61,6 +61,12 @@
     }
 
 
+    .pagination .more_btn
+    {
+        margin-bottom: 24px;
+    }
+
+
 
     /*----------
         Tabs
@@ -586,23 +592,22 @@
     }
 
 
-    .about_info .slider
+    .about_info > .swiper > .swiper-button-prev
+    {
+        margin-left: 38px;
+    }
+
+    .about_info > .swiper > .swiper-button-next
+    {
+        margin-left: 138px;
+    }
+
+
+    .about_info .images
     {
         width: calc(50% - 24px);
         margin-top: 0;
         padding-top: 60px;
-    }
-
-
-    .about_info .swiper-button-prev
-    {
-        margin-left: 62px;
-    }
-
-
-    .about_info .swiper-button-next
-    {
-        margin-left: 148px;
     }
 
 
@@ -709,12 +714,6 @@
     /*------------------
         Product info
     ------------------*/
-    .product_info .images .thumbs
-    {
-        height: 620px;
-    }
-
-
     .product_info .buy
     {
         margin-top: 32px;

@@ -58,10 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				768: {
 					slidesPerView: 3
 				},
-				1280: {
+				1024: {
 					slidesPerView: 4
 				},
-				1900: {
+				1280: {
 					slidesPerView: 5
 				}
 			},
@@ -108,12 +108,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			spaceBetween: 2,
 			breakpoints: {
 				0: {
-					slidesPerView: 2
+					slidesPerView: 'auto'
 				},
 				768: {
 					slidesPerView: 3
 				},
-				1280: {
+				1024: {
 					slidesPerView: 4
 				}
 			},
@@ -160,7 +160,14 @@ document.addEventListener('DOMContentLoaded', function () {
 				clickable: true,
 				bulletActiveClass: 'active'
 			},
-			lazy: true
+			lazy: true,
+			on: {
+				beforeSlideChangeStart: swiper => {
+					$(swiper.el).find('video').get(0).pause()
+
+					pauseAllVideos()
+				}
+			}
 		}
 
 		bannersSliders.push(new Swiper('.banners_s' + i, options))
@@ -168,8 +175,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// About info slider
+	const aboutInfoImagesSliders = [],
+		aboutInfoImages = document.querySelectorAll('.about_info .images .swiper')
+
+	aboutInfoImages.forEach((el, i) => {
+		el.classList.add('about_info_images_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			spaceBetween: 0,
+			slidesPerView: 1,
+			nested: true,
+			lazy: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			}
+		}
+
+		aboutInfoImagesSliders.push(new Swiper('.about_info_images_s' + i, options))
+	})
+
+
 	const aboutInfoSliders = [],
-		aboutInfo = document.querySelectorAll('.about_info .slider .swiper')
+		aboutInfo = document.querySelectorAll('.about_info > .swiper')
 
 	aboutInfo.forEach((el, i) => {
 		el.classList.add('about_info_s' + i)
@@ -185,8 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			navigation: {
 				nextEl: '.about-swiper-button-next',
 				prevEl: '.about-swiper-button-prev'
-			},
-			lazy: true
+			}
 		}
 
 		aboutInfoSliders.push(new Swiper('.about_info_s' + i, options))
@@ -214,12 +246,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			spaceBetween: 2,
 			breakpoints: {
 				0: {
-					slidesPerView: 2
+					slidesPerView: 'auto'
 				},
 				768: {
 					slidesPerView: 3
 				},
-				1280: {
+				1024: {
 					slidesPerView: 4
 				}
 			},
@@ -715,11 +747,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			thumbs: {
 				swiper: productThumbs
 			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
 			pagination: {
 				el: '.swiper-pagination',
-				type: 'bullets',
-				clickable: true,
-				bulletActiveClass: 'active'
+				type: 'fraction',
 			}
 		})
 	}
@@ -858,13 +892,36 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 		})
 	}
+
+
+	// Youtube
+	var players = []
+
+	function onYouTubeIframeAPIReady() {
+		var iframes = document.querySelectorAll('.youtube-player')
+
+		iframes.forEach(function(iframe, i) {
+			let videoId = iframe.getAttribute('data-video-id')
+
+			players[i] = new YT.Player(iframe, {
+				videoId: videoId
+			})
+		})
+	}
+
+
+	function pauseAllVideos() {
+		players.forEach(function(player) {
+			player.pauseVideo()
+		})
+	}
 })
 
 
 
 window.addEventListener('load', function () {
 	// Fix. header
-	headerInit   = true,
+	headerInit = true,
 	headerHeight = $('header').outerHeight()
 
 	$('header:not(.absolute)').wrap('<div class="header_wrap"></div>')
@@ -873,6 +930,18 @@ window.addEventListener('load', function () {
 	headerInit && $(window).scrollTop() > headerHeight
 		? $('header').addClass('fixed')
 		: $('header').removeClass('fixed')
+
+
+	// Fix. mob. header
+	mobHeaderInit = true,
+	mobHeaderHeight = $('.mob_header').outerHeight()
+
+	$('.mob_header:not(.absolute)').wrap('<div class="mob_header_wrap"></div>')
+	$('.mob_header_wrap').height(mobHeaderHeight)
+
+	mobHeaderInit && $(window).scrollTop() > mobHeaderHeight
+		? $('.mob_header').addClass('fixed')
+		: $('.mob_header').removeClass('fixed')
 })
 
 
@@ -882,6 +951,11 @@ window.addEventListener('scroll', function () {
 	typeof headerInit !== 'undefined' && headerInit && $(window).scrollTop() > headerHeight
 		? $('header').addClass('fixed')
 		: $('header').removeClass('fixed')
+
+	// Fix. mob. header
+	typeof mobHeaderInit !== 'undefined' && mobHeaderInit && $(window).scrollTop() > mobHeaderHeight
+		? $('.mob_header').addClass('fixed')
+		: $('.mob_header').removeClass('fixed')
 })
 
 
@@ -909,6 +983,22 @@ window.addEventListener('resize', function () {
 			headerInit && $(window).scrollTop() > headerHeight
 				? $('header').addClass('fixed')
 				: $('header').removeClass('fixed')
+		}, 100)
+
+
+		// Fix. mob. header
+		mobHeaderInit = false
+		$('.mob_header_wrap').height('auto')
+
+		setTimeout(() => {
+			mobHeaderInit = true
+			mobHeaderHeight = $('.mob_header').outerHeight()
+
+			$('.mob_header_wrap').height(mobHeaderHeight)
+
+			mobHeaderInit && $(window).scrollTop() > mobHeaderHeight
+				? $('.mob_header').addClass('fixed')
+				: $('.mob_header').removeClass('fixed')
 		}, 100)
 
 

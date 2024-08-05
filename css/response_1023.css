@@ -225,9 +225,29 @@
 
 
 
+    header.fixed .menu_item > a
+    {
+        height: auto;
+    }
+
+
+    header.fixed .data
+    {
+        width: 100%;
+    }
+
+
+    header.fixed .contacts
+    {
+        display: block;
+    }
+
+
+
     /*-----------------
         Mob. header
     -----------------*/
+    .mob_header_wrap,
     .mob_header
     {
         display: block;
@@ -257,6 +277,31 @@
     .block_head .desc
     {
         font-size: 16px;
+    }
+
+
+
+    .block_head .all_link
+    {
+        margin-right: -10px;
+    }
+
+
+    .block_head .all_link a
+    {
+        padding: 10px;
+    }
+
+
+    .block_head .all_link span
+    {
+        display: none;
+    }
+
+
+    .block_head .all_link .icon
+    {
+        margin-left: 0;
     }
 
 
@@ -399,6 +444,12 @@
     }
 
 
+    .products .product .name a
+    {
+        -webkit-line-clamp: 2;
+    }
+
+
 
     /*-------------
         Banners
@@ -468,7 +519,6 @@
     .product_info .images .thumbs
     {
         width: 80px;
-        height: 630px;
     }
 
 
