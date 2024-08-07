@@ -1014,7 +1014,7 @@
     }
 
 
-    .product_info .data
+    .product_info > .cont > .data
     {
         margin-top: 40px;
     }
@@ -1046,7 +1046,7 @@
     .product_info .colors,
     .product_info .sizes
     {
-        margin-top: 32px;
+        margin-top: 28px;
     }
 
 

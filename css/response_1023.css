@@ -522,10 +522,70 @@
     }
 
 
-    .product_info .data
+    .product_info > .cont > .data
     {
+        display: flex;
+        flex-direction: column;
+
         width: 100%;
         margin-top: 48px;
+    }
+
+
+    .product_info .product_name
+    {
+        order: 1;
+    }
+
+
+    .product_info .price
+    {
+        order: 2;
+
+        margin-top: 28px;
+        padding-top: 28px;
+    }
+
+
+    .product_info .sizes
+    {
+        order: 3;
+
+        margin-top: 28px;
+    }
+
+
+    .product_info .buy
+    {
+        order: 4;
+    }
+
+
+    .product_info .buy .btns
+    {
+        margin-top: 0;
+    }
+
+
+    .product_info .buy .favorite_btn
+    {
+        display: none;
+    }
+
+
+    .product_info .features,
+    .product_info .colors,
+    .product_info .accordion
+    {
+        order: 5;
+
+        margin-top: 28px;
+    }
+
+
+    .product_info > .cont > .data
+    {
+        margin-top: 28px;
     }
 
 

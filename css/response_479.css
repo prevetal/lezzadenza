@@ -408,7 +408,7 @@
     }
 
 
-    .product_info .data
+    .product_info > .cont > .data
     {
         margin-top: 20px;
     }
@@ -428,7 +428,7 @@
     {
         line-height: calc(100% + 8px);
 
-        padding-right: 40px;
+        padding-right: 0;
     }
 
 
@@ -503,10 +503,22 @@
     }
 
 
-    .product_info .buy .favorite_btn
+    .product_info .price
     {
-        display: none;
+        margin-top: 24px;
+        padding-top: 24px;
     }
+
+
+    .product_info .features,
+    .product_info .colors,
+    .product_info .accordion,
+    .product_info .colors,
+    .product_info .sizes
+    {
+        margin-top: 24px;
+    }
+
 
 
 

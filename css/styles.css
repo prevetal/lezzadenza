@@ -5851,7 +5851,7 @@ header.fixed .contacts
 }
 
 
-.product_info .data
+.product_info > .cont > .data
 {
     position: relative;
 
@@ -6286,26 +6286,22 @@ header.fixed .contacts
 }
 
 
-.product_info .buy
-{
-    margin-top: 35px;
-    padding-top: 35px;
-
-    border-top: 1px solid #ededed;
-}
-
-
-.product_info .buy .price
+.product_info .price
 {
     font-size: var(--font_size_title);
     font-weight: 600;
     line-height: 100%;
 
+    margin-top: 35px;
+    padding-top: 35px;
+
     white-space: nowrap;
+
+    border-top: 1px solid #ededed;
 }
 
 
-.product_info .buy .price .old
+.product_info .price .old
 {
     font-weight: 400;
 

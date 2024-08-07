@@ -344,7 +344,7 @@
     }
 
 
-    .product_info .data
+    .product_info > .cont > .data
     {
         width: calc(50% - 12px);
     }
