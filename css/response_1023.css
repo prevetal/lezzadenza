@@ -534,22 +534,26 @@
 
     .product_info .product_name
     {
-        order: 1;
+        order: 6;
+
+        margin-top: 28px;
     }
 
 
     .product_info .price
     {
-        order: 2;
+        order: 1;
 
         margin-top: 28px;
-        padding-top: 28px;
+        padding-top: 0;
+
+        border: none;
     }
 
 
     .product_info .sizes
     {
-        order: 3;
+        order: 4;
 
         margin-top: 28px;
     }
@@ -557,7 +561,7 @@
 
     .product_info .buy
     {
-        order: 4;
+        order: 5;
     }
 
 
@@ -573,11 +577,25 @@
     }
 
 
-    .product_info .features,
-    .product_info .colors,
+    .product_info .features
+    {
+        order: 2;
+
+        margin-top: 28px;
+    }
+
+
+    .product_info .colors
+    {
+        order: 3;
+
+        margin-top: 28px;
+    }
+
+
     .product_info .accordion
     {
-        order: 5;
+        order: 7;
 
         margin-top: 28px;
     }

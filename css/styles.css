@@ -6058,7 +6058,7 @@ header.fixed .contacts
 
 .product_info .colors .swiper-slide
 {
-    width: 80px;
+    width: 60px;
 }
 
 
@@ -6067,12 +6067,8 @@ header.fixed .contacts
 {
     top: 0;
 
-    align-content: flex-start;
-    align-items: flex-start;
-
     height: 100%;
     margin: 0;
-    padding-top: 55px;
 }
 
 
@@ -6148,9 +6144,8 @@ header.fixed .contacts
 {
     position: relative;
 
-    width: 80px;
-    height: 106px;
-    margin-bottom: 12px;
+    width: 60px;
+    height: 79px;
 
     background: #ddd;
 }
@@ -6159,13 +6154,13 @@ header.fixed .contacts
 .product_info .colors .color .thumb:after
 {
     position: absolute;
-    top: -5px;
-    left: -5px;
+    top: -4px;
+    left: -4px;
 
     display: block;
 
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
 
     content: '';
     transition: .2s linear;

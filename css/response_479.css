@@ -39,17 +39,6 @@
 
 
 
-    /*----------------
-        Top banner
-    ----------------*/
-    .top_banner
-    {
-        font-size: 11px;
-        line-height: 15px;
-    }
-
-
-
     /*-----------------
         Mob. header
     -----------------*/
@@ -428,6 +417,7 @@
     {
         line-height: calc(100% + 8px);
 
+        margin-top: 24px;
         padding-right: 0;
     }
 
@@ -506,7 +496,6 @@
     .product_info .price
     {
         margin-top: 24px;
-        padding-top: 24px;
     }
 
 

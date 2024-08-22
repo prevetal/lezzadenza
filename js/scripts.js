@@ -19,7 +19,7 @@ function onYouTubeIframeAPIReady() {
 	})
 }
 
-function pauseAllVideos() {
+function pauseYoutubeVideos() {
 	players.forEach(player => player.stopVideo())
 }
 
@@ -183,10 +183,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			lazy: true,
 			on: {
-				beforeSlideChangeStart: swiper => {
-					$(swiper.el).find('video').get(0).pause()
+				slideChangeTransitionStart: swiper => {
+					$(swiper.el).find('video').each((el, video) => video.pause())
 
-					pauseAllVideos()
+					pauseYoutubeVideos()
+				},
+				slideChangeTransitionEnd: swiper => {
+					$(swiper.el).find('.active video').get(0).play()
 				}
 			}
 		}
@@ -461,7 +464,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				prevEl: '.swiper-button-prev'
 			},
 			lazy: true,
-			spaceBetween: 22,
+			spaceBetween: 16,
 			slidesPerView: 'auto'
 		}
 
