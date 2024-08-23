@@ -193,9 +193,10 @@
     /*-----------------
         Main slider
     -----------------*/
-    .main_slider .cont
+    .main_slider .cont,
+    .main_slider video
     {
-        min-height: 480px;
+        height: 480px;
     }
 
 

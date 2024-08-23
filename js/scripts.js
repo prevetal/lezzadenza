@@ -4,24 +4,24 @@ BODY = document.getElementsByTagName('body')[0]
 
 
 // Youtube
-var players = []
+// var players = []
 
-function onYouTubeIframeAPIReady() {
-	var iframes = document.querySelectorAll('.youtube-player')
+// function onYouTubeIframeAPIReady() {
+// 	var iframes = document.querySelectorAll('.youtube-player')
 
-	iframes.forEach(function(iframe) {
-		players.push(new YT.Player(iframe, {
-			videoId: iframe.getAttribute('data-video-id'),
-			playerVars: {
-				'playsinline': 1
-			}
-		}))
-	})
-}
+// 	iframes.forEach(function(iframe) {
+// 		players.push(new YT.Player(iframe, {
+// 			videoId: iframe.getAttribute('data-video-id'),
+// 			playerVars: {
+// 				'playsinline': 1
+// 			}
+// 		}))
+// 	})
+// }
 
-function pauseYoutubeVideos() {
-	players.forEach(player => player.stopVideo())
-}
+// function pauseYoutubeVideos() {
+// 	players.forEach(player => player.stopVideo())
+// }
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -43,7 +43,17 @@ document.addEventListener('DOMContentLoaded', function () {
 				clickable: true,
 				bulletActiveClass: 'active'
 			},
-			lazy: true
+			lazy: true,
+			on: {
+				slideChangeTransitionStart: swiper => {
+					$(swiper.el).find('video').each((el, video) => video.pause())
+
+					// pauseYoutubeVideos()
+				},
+				slideChangeTransitionEnd: swiper => {
+					$(swiper.el).find('.active video').get(0).play()
+				}
+			}
 		})
 	}
 
@@ -186,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				slideChangeTransitionStart: swiper => {
 					$(swiper.el).find('video').each((el, video) => video.pause())
 
-					pauseYoutubeVideos()
+					// pauseYoutubeVideos()
 				},
 				slideChangeTransitionEnd: swiper => {
 					$(swiper.el).find('.active video').get(0).play()
@@ -218,6 +228,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
+			},
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
 			}
 		}
 

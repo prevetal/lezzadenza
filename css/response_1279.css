@@ -390,9 +390,8 @@
     .about_info > .swiper > .swiper-button-prev
     {
         top: auto;
-        right: 92px;
         bottom: 3px;
-        left: auto;
+        left: calc((100% - 120px) / 2 - 50px + 120px);
 
         margin: 0;
     }
@@ -400,7 +399,7 @@
     .about_info > .swiper > .swiper-button-next
     {
         top: auto;
-        right: 24px;
+        right: calc((100% - 120px) / 2 - 80px);
         bottom: 3px;
         left: auto;
 
@@ -431,6 +430,12 @@
     .about_info .data:after
     {
         display: none;
+    }
+
+
+    .about_info .link a
+    {
+        width: 120px;
     }
 
 

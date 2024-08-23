@@ -2956,6 +2956,17 @@ header.fixed .contacts
 }
 
 
+.main_slider video
+{
+    display: block;
+
+    width: 100%;
+    height: 550px;
+
+    object-fit: cover;
+}
+
+
 .main_slider .data
 {
     color: #fff;
@@ -3000,6 +3011,18 @@ header.fixed .contacts
 
     color: currentColor;
     border: 1px solid;
+}
+
+
+.main_slider .link .icon
+{
+    display: none;
+
+    width: 16px;
+    height: 11px;
+    margin-left: 6px;
+
+    vertical-align: middle;
 }
 
 

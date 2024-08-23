@@ -506,7 +506,8 @@
 
     .main_slider .cont
     {
-        min-height: 550px;
+        height: 550px;
+        min-height: 0;
         padding-top: 80px;
     }
 
@@ -529,10 +530,27 @@
 
     .main_slider .link
     {
+        line-height: 18px;
+
         padding: 0;
 
         border: none;
+    }
+
+
+    .main_slider .link span
+    {
+        display: inline-block;
+
+        vertical-align: middle;
+
         border-bottom: 1px solid;
+    }
+
+
+    .main_slider .link .icon
+    {
+        display: inline-block;
     }
 
 
@@ -840,12 +858,6 @@
     .about_info .block_head
     {
         margin-bottom: 40px;
-    }
-
-
-    .about_info > .swiper > .swiper-button-prev
-    {
-        right: 80px;
     }
 
 
