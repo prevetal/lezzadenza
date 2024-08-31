@@ -45,13 +45,23 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			lazy: true,
 			on: {
+				init: swiper => {
+					setHeight(swiper.el.querySelectorAll('.swiper-slide'))
+				},
+				resize: swiper => {
+					swiper.el.querySelectorAll('.swiper-slide').forEach(slide => slide.style.height = 'auto')
+
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.swiper-slide')))
+				},
 				slideChangeTransitionStart: swiper => {
 					$(swiper.el).find('video').each((el, video) => video.pause())
 
 					// pauseYoutubeVideos()
 				},
 				slideChangeTransitionEnd: swiper => {
-					$(swiper.el).find('.active video').get(0).play()
+					if ($(swiper.el).find('.active video').get(0)) {
+						$(swiper.el).find('.active video').get(0).play()
+					}
 				}
 			}
 		})
@@ -199,7 +209,9 @@ document.addEventListener('DOMContentLoaded', function () {
 					// pauseYoutubeVideos()
 				},
 				slideChangeTransitionEnd: swiper => {
-					$(swiper.el).find('.active video').get(0).play()
+					if ($(swiper.el).find('.active video').get(0)) {
+						$(swiper.el).find('.active video').get(0).play()
+					}
 				}
 			}
 		}

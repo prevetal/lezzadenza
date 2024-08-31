@@ -391,7 +391,7 @@
     {
         top: auto;
         bottom: 3px;
-        left: calc((100% - 120px) / 2 - 50px + 120px);
+        left: calc((100% - 120px) / 2 - 50px + 130px);
 
         margin: 0;
     }

@@ -2961,7 +2961,7 @@ header.fixed .contacts
     display: block;
 
     width: 100%;
-    height: 550px;
+    height: 100%;
 
     object-fit: cover;
 }
@@ -3037,6 +3037,8 @@ header.fixed .contacts
 .mob_main_slider
 {
     display: none;
+
+    margin-bottom: 20px;
 }
 
 
