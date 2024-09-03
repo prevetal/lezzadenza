@@ -1227,6 +1227,11 @@
         display: none;
     }
 
+    .banners_slider.block.small_m
+    {
+        margin-bottom: 24px;
+    }
+
 
     .mob_banners_slider
     {
