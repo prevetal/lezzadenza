@@ -3519,6 +3519,12 @@ header.fixed .contacts
 /*--------------------
     Banners slider
 --------------------*/
+.banners_slider.block.small_m
+{
+    margin-bottom: 30px;
+}
+
+
 .banners_slider .banner
 {
     position: relative;
