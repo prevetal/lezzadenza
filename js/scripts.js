@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			slideVisibleClass: 'visible',
 			spaceBetween: 0,
 			slidesPerView: 1,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
@@ -195,6 +199,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			slideVisibleClass: 'visible',
 			spaceBetween: 0,
 			slidesPerView: 1,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',

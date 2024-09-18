@@ -3034,6 +3034,17 @@ header.fixed .contacts
 }
 
 
+.main_slider .swiper-button-next,
+.main_slider .swiper-button-prev
+{
+    top: 50%;
+
+    margin-top: -22px;
+
+    color: #fff;
+}
+
+
 .mob_main_slider
 {
     display: none;
@@ -3500,6 +3511,7 @@ header.fixed .contacts
 .banners .banner
 {
     display: block;
+    overflow: hidden;
 
     text-decoration: none;
 
@@ -3512,6 +3524,14 @@ header.fixed .contacts
     display: block;
 
     width: 100%;
+
+    transition: transform .2s linear;
+}
+
+
+.banners .banner:hover .thumb img
+{
+    transform: scale(1.05);
 }
 
 
@@ -3522,6 +3542,17 @@ header.fixed .contacts
 .banners_slider.block.small_m
 {
     margin-bottom: 30px;
+}
+
+
+.banners_slider .swiper-button-next,
+.banners_slider .swiper-button-prev
+{
+    top: 50%;
+
+    margin-top: -22px;
+
+    color: #fff;
 }
 
 
