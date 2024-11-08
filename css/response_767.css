@@ -163,63 +163,20 @@
     /*------------
         Header
     ------------*/
-    header .scroll
-    {
-        padding: 20px 0;
-    }
-
-
-    header .menu_item .sub_menu,
-    header .menu_item:hover .sub_menu
-    {
-        padding-top: 20px;
-    }
-
-
-
-    /*-----------------
-        Mob. header
-    -----------------*/
-    .top_banner ~ .mob_header.absolute
+    .top_banner + header.absolute
     {
         top: 48px;
     }
 
 
-    .mob_header
-    {
-        padding: 20px 0;
-    }
-
-
-    .mob_header .logo img
+    header .logo img
     {
         width: 128px;
         height: 40px;
     }
 
 
-    .mob_header .icons .search .btn .icon
-    {
-        width: 22px;
-        height: 22px;
-    }
-
-    .mob_header .icons .account .btn .icon
-    {
-        width: 21px;
-        height: 22px;
-    }
-
-    .mob_header .icons .favorite .btn .icon,
-    .mob_header .icons .cart .btn .icon
-    {
-        width: 22px;
-        height: 21px;
-    }
-
-
-    .mob_header .search .input
+    header .search .input
     {
         font-size: 20px;
 
@@ -228,19 +185,19 @@
     }
 
 
-    .mob_header .search .submit_btn
+    header .search .submit_btn
     {
         right: 68px;
     }
 
-    .mob_header .search .submit_btn .icon
+    header .search .submit_btn .icon
     {
         width: 22px;
         height: 22px;
     }
 
 
-    .mob_header .search .sep
+    header .search .sep
     {
         right: 40px;
 
@@ -248,17 +205,40 @@
     }
 
 
-    .mob_header .search .close_btn .icon
+    header .search .close_btn .icon
     {
         width: 17px;
         height: 17px;
     }
 
 
-    .mob_header .mob_menu_btn
+    header .icons .search .btn .icon
     {
         width: 22px;
         height: 22px;
+    }
+
+    header .icons .account .btn .icon
+    {
+        width: 21px;
+        height: 22px;
+    }
+
+    header .icons .favorite .btn .icon,
+    header .icons .cart .btn .icon
+    {
+        width: 22px;
+        height: 21px;
+    }
+
+
+
+    /*---------------
+        Mob. menu
+    ---------------*/
+    .top_banner ~ .mob_menu
+    {
+        padding-top: 128px;
     }
 
 

@@ -608,22 +608,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Mob. menu
-	$('.mob_header .mob_menu_btn').click((e) => {
+	$('header .mob_menu_btn').click((e) => {
 		e.preventDefault()
 
-		$('.mob_header .mob_menu_btn').addClass('active')
-		$('body').addClass('lock')
-		$('header').addClass('show')
-		$('.overlay').fadeIn(300)
+		$('header .mob_menu_btn').toggleClass('active')
+		$('body').toggleClass('lock')
+		$('.mob_menu').toggleClass('show')
 	})
 
-	$('header .mob_close_btn, .overlay').click((e) => {
+
+	$('.mob_menu .menu > * > a.sub_link').click(function(e) {
 		e.preventDefault()
 
-		$('.mob_header .mob_menu_btn').removeClass('active')
-		$('body').removeClass('lock')
-		$('header').removeClass('show')
-		$('.overlay').fadeOut(300)
+		$(this).toggleClass('active').next().slideToggle(300)
+	})
+
+
+	$('.mob_menu .menu .sub .spoler_btn').click(function(e) {
+		e.preventDefault()
+
+		let sub = $(this).closest('.sub')
+
+		$(this).toggleClass('active')
+		sub.find('.hide').slideToggle(300)
 	})
 
 
@@ -965,18 +972,6 @@ window.addEventListener('load', function () {
 	headerInit && $(window).scrollTop() > headerHeight
 		? $('header').addClass('fixed')
 		: $('header').removeClass('fixed')
-
-
-	// Fix. mob. header
-	mobHeaderInit = true,
-	mobHeaderHeight = $('.mob_header').outerHeight()
-
-	$('.mob_header:not(.absolute)').wrap('<div class="mob_header_wrap"></div>')
-	$('.mob_header_wrap').height(mobHeaderHeight)
-
-	mobHeaderInit && $(window).scrollTop() > mobHeaderHeight
-		? $('.mob_header').addClass('fixed')
-		: $('.mob_header').removeClass('fixed')
 })
 
 
@@ -986,11 +981,6 @@ window.addEventListener('scroll', function () {
 	typeof headerInit !== 'undefined' && headerInit && $(window).scrollTop() > headerHeight
 		? $('header').addClass('fixed')
 		: $('header').removeClass('fixed')
-
-	// Fix. mob. header
-	typeof mobHeaderInit !== 'undefined' && mobHeaderInit && $(window).scrollTop() > mobHeaderHeight
-		? $('.mob_header').addClass('fixed')
-		: $('.mob_header').removeClass('fixed')
 })
 
 
@@ -1018,22 +1008,6 @@ window.addEventListener('resize', function () {
 			headerInit && $(window).scrollTop() > headerHeight
 				? $('header').addClass('fixed')
 				: $('header').removeClass('fixed')
-		}, 100)
-
-
-		// Fix. mob. header
-		mobHeaderInit = false
-		$('.mob_header_wrap').height('auto')
-
-		setTimeout(() => {
-			mobHeaderInit = true
-			mobHeaderHeight = $('.mob_header').outerHeight()
-
-			$('.mob_header_wrap').height(mobHeaderHeight)
-
-			mobHeaderInit && $(window).scrollTop() > mobHeaderHeight
-				? $('.mob_header').addClass('fixed')
-				: $('.mob_header').removeClass('fixed')
 		}, 100)
 
 

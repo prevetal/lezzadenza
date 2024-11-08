@@ -57,183 +57,216 @@
 
 
 				<header>
-					<buttom class="mob_close_btn"></buttom>
+					<div class="cont small row">
+						<a href="/" class="logo">
+							<img src="images/logo.svg" alt="">
+						</a>
 
-					<div class="scroll">
-						<div class="cont small row">
-							<a href="/" class="logo">
-								<img src="images/logo.svg" alt="">
-							</a>
+						<nav class="menu row">
+							<div class="menu_item">
+								<a href="/" class="sub_link active">КАТАЛОГ</a>
 
-							<nav class="menu row">
-								<div class="menu_item">
-									<a href="/" class="sub_link active">КАТАЛОГ</a>
+								<div class="sub_menu">
+									<div class="cont small">
+										<div class="row">
+											<div class="col">
+												<div><a href="/">Платья</a></div>
+												<div><a href="/">Сарафаны</a></div>
+											</div>
 
-									<div class="sub_menu">
+											<div class="col">
+												<div><a href="/">Комбинезоны</a></div>
+												<div><a href="/">Блузки</a></div>
+											</div>
+
+											<div class="col">
+												<div><a href="/">Юбки</a></div>
+												<div><a href="/">Брюки</a></div>
+											</div>
+
+											<div class="col">
+												<div><a href="/">Джинсы</a></div>
+												<div><a href="/">Топы</a></div>
+											</div>
+
+											<div class="col">
+												<div><a href="/">Футболки</a></div>
+												<div><a href="/">Вязанный трикотаж</a></div>
+											</div>
+
+											<div class="col">
+												<div><a href="/">Верхняя одежда</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="menu_item">
+								<a href="/">ПОКУПАТЕЛЯМ</a>
+							</div>
+
+							<div class="menu_item">
+								<a href="/">КОМПАНИЯ</a>
+							</div>
+
+							<div class="menu_item">
+								<a href="/">SALE</a>
+							</div>
+						</nav>
+
+						<div class="data">
+							<div class="contacts">
+								<div class="phone">
+									<a href="tel:88009630830">8 800 963-08-30</a>
+
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_whatsapp"></use></svg>
+								</div>
+
+								<button class="callback_btn modal_btn" data-modal="callback_modal">Обратный звонок</button>
+							</div>
+
+							<div class="icons">
+								<div class="search modal_cont">
+									<button class="btn mini_modal_btn" data-modal-id="#search_modal">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+									</button>
+
+									<div class="mini_modal" id="search_modal">
 										<div class="cont small">
-											<div class="row">
-												<div class="col">
-													<div><a href="/">Платья</a></div>
-													<div><a href="/">Сарафаны</a></div>
-												</div>
+											<form action="">
+												<input type="text" name="" value="" class="input" placeholder="Поиск">
 
-												<div class="col">
-													<div><a href="/">Комбинезоны</a></div>
-													<div><a href="/">Блузки</a></div>
-												</div>
+												<button type="submit" class="submit_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+												</button>
 
-												<div class="col">
-													<div><a href="/">Юбки</a></div>
-													<div><a href="/">Брюки</a></div>
-												</div>
+												<div class="sep"></div>
 
-												<div class="col">
-													<div><a href="/">Джинсы</a></div>
-													<div><a href="/">Топы</a></div>
-												</div>
-
-												<div class="col">
-													<div><a href="/">Футболки</a></div>
-													<div><a href="/">Вязанный трикотаж</a></div>
-												</div>
-
-												<div class="col">
-													<div><a href="/">Верхняя одежда</a></div>
-												</div>
-											</div>
+												<button type="button" class="close_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+												</button>
+											</form>
 										</div>
 									</div>
 								</div>
 
-								<div class="menu_item">
-									<a href="/">ПОКУПАТЕЛЯМ</a>
+								<div class="account">
+									<button class="btn modal_btn" data-modal="login_modal">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
+									</button>
 								</div>
 
-								<div class="menu_item">
-									<a href="/">КОМПАНИЯ</a>
+								<div class="favorite">
+									<a href="/" class="btn">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_favorite"></use></svg>
+										<span>13</span>
+									</a>
 								</div>
 
-								<div class="menu_item">
-									<a href="/">SALE</a>
-								</div>
-							</nav>
-
-							<div class="data">
-								<div class="contacts">
-									<div class="phone">
-										<a href="tel:88009630830">8 800 963-08-30</a>
-
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_whatsapp"></use></svg>
-									</div>
-
-									<button class="callback_btn modal_btn" data-modal="callback_modal">Обратный звонок</button>
+								<div class="cart">
+									<a href="/" class="btn">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_cart"></use></svg>
+										<span>3</span>
+									</a>
 								</div>
 
-								<div class="icons">
-									<div class="search modal_cont">
-										<button class="btn mini_modal_btn" data-modal-id="#search_modal">
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
-										</button>
-
-										<div class="mini_modal" id="search_modal">
-											<div class="cont small">
-												<form action="">
-													<input type="text" name="" value="" class="input" placeholder="Поиск">
-
-													<button type="submit" class="submit_btn">
-														<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
-													</button>
-
-													<div class="sep"></div>
-
-													<button type="button" class="close_btn">
-														<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
-													</button>
-												</form>
-											</div>
-										</div>
-									</div>
-
-									<div class="account">
-										<button class="btn modal_btn" data-modal="login_modal">
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
-										</button>
-									</div>
-
-									<div class="favorite">
-										<a href="/" class="btn">
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_favorite"></use></svg>
-											<span>13</span>
-										</a>
-									</div>
-
-									<div class="cart">
-										<a href="/" class="btn">
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_cart"></use></svg>
-											<span>3</span>
-										</a>
-									</div>
-								</div>
+								<button class="mob_menu_btn">
+									<span></span>
+								</button>
 							</div>
 						</div>
 					</div>
 				</header>
 
 
-				<section class="mob_header">
-					<div class="cont padding row">
-						<a href="/" class="logo">
-							<img src="images/logo.svg" alt="">
-						</a>
+				<section class="mob_menu">
+					<div class="scroll">
+						<div class="menu">
+							<div>
+								<a href="/" class="sub_link">
+									<span>КАТАЛОГ</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+								</a>
 
-						<div class="icons">
-							<div class="search modal_cont">
-								<button class="btn mini_modal_btn" data-modal-id="#mob_search_modal">
-									<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
-								</button>
+								<div class="sub">
+									<div><a href="/">Платья</a></div>
 
-								<div class="mini_modal" id="mob_search_modal">
-									<div class="cont small">
-										<form action="">
-											<input type="text" name="" value="" class="input" placeholder="Поиск">
+									<div><a href="/">Сарафаны</a></div>
 
-											<button type="submit" class="submit_btn">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
-											</button>
+									<div><a href="/">Комбинезоны</a></div>
 
-											<div class="sep"></div>
+									<div><a href="/">Блузки</a></div>
 
-											<button type="button" class="close_btn">
-												<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
-											</button>
-										</form>
+									<div><a href="/">Юбки</a></div>
+
+									<div><a href="/">Брюки</a></div>
+
+									<div class="hide">
+										<div><a href="/">Джинсы</a></div>
+
+										<div><a href="/">Топы</a></div>
+
+										<div><a href="/">Футболки</a></div>
+
+										<div><a href="/">Вязанный трикотаж</a></div>
+
+										<div><a href="/">Верхняя одежда</a></div>
 									</div>
+
+									<button class="spoler_btn">
+										<span>Еще</span>
+										<span>Свернуть</span>
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+									</button>
 								</div>
 							</div>
 
-							<div class="account">
-								<button class="btn modal_btn" data-modal="login_modal">
-									<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
-								</button>
-							</div>
-
-							<div class="favorite">
-								<a href="/" class="btn">
-									<svg class="icon"><use xlink:href="images/sprite.svg#ic_favorite"></use></svg>
-									<span>13</span>
+							<div>
+								<a href="/" class="sub_link">
+									<span>ПОКУПАТЕЛЯМ</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
 								</a>
 							</div>
 
-							<div class="cart">
-								<a class="btn active">
-									<svg class="icon"><use xlink:href="images/sprite.svg#ic_cart"></use></svg>
-									<span>3</span>
+							<div>
+								<a href="/" class="sub_link">
+									<span>КОМПАНИЯ</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
 								</a>
 							</div>
 
-							<button class="mob_menu_btn">
-								<span></span>
-							</button>
+							<div>
+								<a href="/" class="sub_link">
+									<span>SALE</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="contacts">
+							<div class="phone">
+								<a href="tel:88009630830">8 800 963-08-30</a>
+							</div>
+
+							<button class="callback_btn modal_btn" data-modal="callback_modal">Обратный звонок</button>
+
+							<div class="socials">
+								<a href="mailto:" class="email_link">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_email"></use></svg>
+								</a>
+
+								<a href="/" target="_blank" rel="noopener nofollow" class="whatsapp_link">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_whatsapp2"></use></svg>
+								</a>
+
+								<a href="/" target="_blank" rel="noopener nofollow" class="telegram_link">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_telegram"></use></svg>
+								</a>
+
+								<a href="/" target="_blank" rel="noopener nofollow" class="vk_link">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_vk"></use></svg>
+								</a>
+							</div>
 						</div>
 					</div>
 				</section>

@@ -39,49 +39,49 @@
 
 
 
-    /*-----------------
-        Mob. header
-    -----------------*/
-    .mob_header
+    /*------------
+        Header
+    ------------*/
+    header
     {
         padding: 16px 0;
     }
 
 
-    .mob_header .logo img
+    header .logo img
     {
         width: 108px;
         height: 34px;
     }
 
 
-    .mob_header .icons > * + *
+    header .icons > * + *
     {
         margin-left: 24px;
     }
 
 
-    .mob_header .icons .search .btn .icon
+    header .icons .search .btn .icon
     {
         width: 20px;
         height: 20px;
     }
 
-    .mob_header .icons .account .btn .icon
+    header .icons .account .btn .icon
     {
         width: 19px;
         height: 20px;
     }
 
-    .mob_header .icons .favorite .btn .icon,
-    .mob_header .icons .cart .btn .icon
+    header .icons .favorite .btn .icon,
+    header .icons .cart .btn .icon
     {
         width: 20px;
         height: 19px;
     }
 
 
-    .mob_header .search .input
+    header .search .input
     {
         font-size: 18px;
 
@@ -89,21 +89,21 @@
     }
 
 
-    .mob_header .search .submit_btn .icon
+    header .search .submit_btn .icon
     {
         width: 20px;
         height: 20px;
     }
 
 
-    .mob_header .search .close_btn .icon
+    header .search .close_btn .icon
     {
         width: 16px;
         height: 16px;
     }
 
 
-    .mob_header .mob_menu_btn
+    header .mob_menu_btn
     {
         width: 20px;
         height: 20px;
@@ -111,9 +111,26 @@
 
 
 
-    .mob_header.fixed .logo img
+    header.fixed .logo img
     {
         height: 34px;
+    }
+
+
+
+    /*---------------
+        Mob. menu
+    ---------------*/
+    .mob_menu,
+    header.fixed ~ .mob_menu
+    {
+        padding-top: 66px;
+    }
+
+
+    .top_banner ~ .mob_menu
+    {
+        padding-top: 114px;
     }
 
 
