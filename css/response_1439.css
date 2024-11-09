@@ -333,55 +333,78 @@
     ------------------*/
     .product_info .images
     {
-        width: calc(50% - 12px);
-        padding-left: 114px;
-    }
-
-
-    .product_info .images .thumbs
-    {
-        width: 88px;
+        width: calc(100% - 492px);
     }
 
 
     .product_info > .cont > .data
     {
-        width: calc(50% - 12px);
+        width: 452px;
     }
 
 
-    .product_info .colors
+    .product_info .colors,
+    .product_info .sizes,
+    .product_info .buy
     {
-        margin-top: 36px;
+        margin-top: 28px;
+    }
+
+
+    .product_info .price
+    {
+        margin-top: 28px;
+        padding-top: 28px;
+    }
+
+
+    .product_info .price .old
+    {
+        margin-left: 16px;
+    }
+
+
+    .product_info .buy .btns > *
+    {
+        width: 50%;
+    }
+
+
+    .product_info .buy .buy_btn
+    {
+        width: 100%;
     }
 
 
     .product_info .buy .wb_btn,
     .product_info .buy .ozon_btn
     {
+        width: 100%;
         margin-top: 16px;
+    }
+
+
+    .product_info .buy .quike_buy_btn
+    {
+        width: calc(50% - 40px);
+    }
+
+
+    .product_info .buy .favorite_btn
+    {
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+
+        width: auto;
+        margin: 0;
+        margin-bottom: 32px;
     }
 
 
     .product_info .accordion_item .head .title
     {
-        font-size: 22px;
-    }
-
-
-
-    /*------------
-        Videos
-    ------------*/
-    .videos .swiper
-    {
-        padding-bottom: 68px;
-    }
-
-
-    .videos .video .thumb .icon
-    {
-        transform: scale(.85);
+        font-size: 20px;
     }
 
 
@@ -419,5 +442,45 @@
     #filter_modal .item
     {
         padding: 24px;
+    }
+
+
+
+    /*--------------------------
+        Product images modal
+    --------------------------*/
+    #product_images_modal
+    {
+        padding: 24px;
+    }
+
+
+    #product_images_modal .images .thumbs
+    {
+        width: 80px;
+    }
+
+
+    #product_images_modal .stickers
+    {
+        left: 68px;
+    }
+
+
+    #product_images_modal .images .big
+    {
+        width: 588px;
+    }
+
+
+    #product_images_modal .images .big .swiper
+    {
+        padding: 0 48px;
+    }
+
+
+    #product_images_modal .images .image
+    {
+        height: calc(100vh - 48px);
     }
 }

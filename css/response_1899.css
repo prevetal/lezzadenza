@@ -714,6 +714,30 @@
     /*------------------
         Product info
     ------------------*/
+    .product_info .images
+    {
+        width: calc(100% - 616px);
+    }
+
+
+    .product_info .images .image .icon
+    {
+        transform: scale(.85);
+    }
+
+
+    .product_info > .cont > .data
+    {
+        width: 576px;
+    }
+
+
+    .product_info .share
+    {
+        margin-bottom: 16px;
+    }
+
+
     .product_info .buy
     {
         margin-top: 32px;
@@ -742,49 +766,7 @@
 
     .product_info .accordion_item .head .title
     {
-        font-size: 24px;
-    }
-
-
-
-    /*------------------
-        Product desc
-    ------------------*/
-    .product_desc .block_head .title
-    {
-        font-size: 24px;
-    }
-
-
-
-    /*-------------------
-        Product sizes
-    -------------------*/
-    .product_sizes .block_head .title
-    {
-        font-size: 24px;
-    }
-
-
-
-    /*------------
-        Videos
-    ------------*/
-    .videos .block_head .title
-    {
-        font-size: 24px;
-    }
-
-
-    .videos .swiper
-    {
-        padding-bottom: 72px;
-    }
-
-
-    .videos .video .thumb .icon
-    {
-        transform: scale(.9);
+        font-size: 22px;
     }
 
 
@@ -848,5 +830,15 @@
     footer .socials
     {
         margin-top: 48px;
+    }
+
+
+
+    /*--------------------------
+        Product images modal
+    --------------------------*/
+    #product_images_modal
+    {
+        padding: 35px;
     }
 }

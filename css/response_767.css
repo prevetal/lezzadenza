@@ -988,63 +988,35 @@
     /*------------------
         Product info
     ------------------*/
+    .product_info .images .stickers
+    {
+        top: 12px;
+        left: 12px;
+    }
+
+
+    .product_info .images .favorite_btn
+    {
+        top: 12px;
+        right: 12px;
+    }
+
+
+    .product_info .images .image .icon
+    {
+        transform: scale(.65);
+    }
+
+
     .product_info .share
     {
-        top: 4px;
-    }
-
-
-    .product_info .images
-    {
-        padding-left: 88px;
-    }
-
-
-    .product_info .images .thumbs
-    {
-        width: 68px;
-    }
-
-
-    .product_info > .cont > .data
-    {
-        margin-top: 40px;
-    }
-
-
-    .product_info .product_name
-    {
-        padding-right: 48px;
-    }
-
-
-    .product_info .share .btn .hover
-    {
-        font-size: 13px;
-        line-height: 19px;
-
-        right: -20px;
-
-        width: 180px;
+        top: -1px;
     }
 
 
     .product_info .features
     {
         margin-top: 20px;
-    }
-
-
-    .product_info .colors,
-    .product_info .sizes
-    {
-        margin-top: 28px;
-    }
-
-
-    .product_info .sizes .label
-    {
-        line-height: 40px;
     }
 
 
@@ -1071,93 +1043,11 @@
     }
 
 
-
-    .product_info .buy .btns
-    {
-        margin-left: -20px;
-    }
-
-
-    .product_info .buy .btns > *
-    {
-        width: calc(50% - 20px);
-        margin-left: 20px;
-    }
-
-
-    .product_info .buy .buy_btn,
     .product_info .buy .wb_btn,
-    .product_info .buy .ozon_btn
-    {
-        width: 100%;
-    }
-
-
-    .product_info .buy .wb_btn,
-    .product_info .buy .ozon_btn
+    .product_info .buy .ozon_btn,
+    .product_info .buy .quike_buy_btn
     {
         margin-top: 10px;
-    }
-
-
-
-    /*------------------
-        Product desc
-    ------------------*/
-    .product_desc:not(.block)
-    {
-        margin-bottom: 40px;
-        padding-bottom: 30px;
-    }
-
-
-    .product_desc .block_head .title
-    {
-        font-size: 22px;
-
-        margin-bottom: 20px;
-    }
-
-
-
-    /*-------------------
-        Product sizes
-    -------------------*/
-    .product_sizes .block_head .title
-    {
-        font-size: 22px;
-
-        margin-bottom: 20px;
-    }
-
-
-
-    /*------------
-        Videos
-    ------------*/
-    .videos .block_head .title
-    {
-        font-size: 22px;
-
-        margin-bottom: 20px;
-    }
-
-
-    .videos .swiper
-    {
-        padding-bottom: 60px;
-    }
-
-
-    .videos .swiper-slide
-    {
-        width: 400px;
-    }
-
-
-    .videos .video .thumb .icon
-    {
-        transform: scale(.7);
     }
 
 
@@ -1352,5 +1242,33 @@
     {
         font-size: 13px;
         line-height: 19px;
+    }
+
+
+
+    /*--------------------------
+        Product images modal
+    --------------------------*/
+    #product_images_modal
+    {
+        padding: 20px;
+    }
+
+
+    #product_images_modal .images
+    {
+        padding-left: 0;
+    }
+
+
+    #product_images_modal .images .thumbs
+    {
+        display: none;
+    }
+
+
+    #product_images_modal .images .image
+    {
+        height: calc(100vh - 40px);
     }
 }

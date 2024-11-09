@@ -397,25 +397,15 @@
     /*------------------
         Product info
     ------------------*/
-    .product_info .share
-    {
-        top: 8px;
-        bottom: auto;
-
-        margin: 0;
-    }
-
-
     .product_info .images
     {
         width: 100%;
-        padding-left: 104px;
     }
 
 
-    .product_info .images .thumbs
+    .product_info .images .favorite_btn
     {
-        width: 80px;
+        display: flex;
     }
 
 
@@ -425,13 +415,36 @@
         flex-direction: column;
 
         width: 100%;
-        margin-top: 48px;
+        margin-top: 24px;
+    }
+
+
+    .product_info .share
+    {
+        top: 1px;
+        bottom: auto;
+
+        margin: 0;
+    }
+
+
+    .product_info .share .btn
+    {
+        padding: 0 16px;
+    }
+
+
+    .product_info .share span
+    {
+        display: none;
     }
 
 
     .product_info .product_name
     {
         order: 1;
+
+        padding-right: 80px;
     }
 
 
@@ -439,7 +452,6 @@
     {
         order: 1;
 
-        margin-top: 28px;
         padding-top: 0;
 
         border: none;
@@ -449,8 +461,6 @@
     .product_info .sizes
     {
         order: 4;
-
-        margin-top: 28px;
     }
 
 
@@ -475,46 +485,18 @@
     .product_info .features
     {
         order: 2;
-
-        margin-top: 28px;
     }
 
 
     .product_info .colors
     {
         order: 3;
-
-        margin-top: 28px;
     }
 
 
     .product_info .accordion
     {
         order: 7;
-
-        margin-top: 28px;
-    }
-
-
-    .product_info > .cont > .data
-    {
-        margin-top: 28px;
-    }
-
-
-
-    /*------------
-        Videos
-    ------------*/
-    .videos .swiper
-    {
-        padding-bottom: 64px;
-    }
-
-
-    .videos .swiper-slide
-    {
-        width: 480px;
     }
 
 
@@ -573,5 +555,21 @@
         width: calc(100% + 136px);
         margin: 40px -68px -40px;
         padding: 20px 68px;
+    }
+
+
+
+    /*--------------------------
+        Product images modal
+    --------------------------*/
+    #product_images_modal .images
+    {
+        padding-left: 104px;
+    }
+
+
+    #product_images_modal .stickers
+    {
+        left: 20px;
     }
 }

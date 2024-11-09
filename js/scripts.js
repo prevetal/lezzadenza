@@ -498,8 +498,21 @@ document.addEventListener('DOMContentLoaded', function () {
 				prevEl: '.swiper-button-prev'
 			},
 			lazy: true,
-			spaceBetween: 16,
-			slidesPerView: 'auto'
+			slidesPerView: 'auto',
+			breakpoints: {
+				0: {
+					spaceBetween: 12
+				},
+				768: {
+					spaceBetween: 16
+				},
+				1024: {
+					spaceBetween: 20
+				},
+				1900: {
+					spaceBetween: 23
+				}
+			}
 		}
 
 		productColorsSliders.push(new Swiper('.product_colors_s' + i, options))
@@ -557,6 +570,72 @@ document.addEventListener('DOMContentLoaded', function () {
 			src: document.getElementById(e.target.getAttribute('data-modal')),
 			type: 'inline'
 		}])
+	})
+
+
+	$('.product_images_btn').click(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
+
+		Fancybox.show([{
+			src: document.getElementById(e.target.getAttribute('data-modal')),
+			type: 'inline'
+		}], {
+			on: {
+				reveal: () => {
+					$('.fancybox__slide').addClass('no_pad')
+
+					// Product images modal
+					if ($('#product_images_modal .images').length) {
+						productThumbs = new Swiper('#product_images_modal .thumbs .swiper:not(.swiper-initialized)', {
+							loop: false,
+							speed: 500,
+							watchSlidesProgress: true,
+							slideActiveClass: 'active',
+							slideVisibleClass: 'visible',
+							spaceBetween: 10,
+							initialSlide: e.target.getAttribute('data-slide-index'),
+							lazy: true,
+							direction: 'vertical',
+							slidesPerView: 'auto',
+							navigation: {
+								nextEl: '.swiper-button-next',
+								prevEl: '.swiper-button-prev'
+							}
+						})
+
+						productImages = new Swiper('#product_images_modal .big .swiper:not(.swiper-initialized)', {
+							loop: false,
+							speed: 500,
+							watchSlidesProgress: true,
+							slideActiveClass: 'active',
+							slideVisibleClass: 'visible',
+							spaceBetween: 20,
+							slidesPerView: 1,
+							initialSlide: e.target.getAttribute('data-slide-index'),
+							lazy: true,
+							thumbs: {
+								swiper: productThumbs
+							},
+							navigation: {
+								nextEl: '.swiper-button-next',
+								prevEl: '.swiper-button-prev'
+							}
+						})
+					}
+				},
+				destroy: () => {
+					if (typeof productThumbs !== 'undefined') {
+						productThumbs.destroy(true, true)
+					}
+
+					if (typeof productImages !== 'undefined') {
+						productImages.destroy(true, true)
+					}
+				}
+			}
+		})
 	})
 
 
@@ -782,48 +861,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// Product page
-	if ($('.product_info .images').length) {
-		const productThumbs = new Swiper('.product_info .thumbs .swiper', {
-			loop: false,
-			speed: 500,
-			watchSlidesProgress: true,
-			slideActiveClass: 'active',
-			slideVisibleClass: 'visible',
-			spaceBetween: 10,
-			lazy: true,
-			direction: 'vertical',
-			slidesPerView: 'auto',
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev'
-			}
-		})
-
-		new Swiper('.product_info .big .swiper', {
-			loop: false,
-			speed: 500,
-			watchSlidesProgress: true,
-			slideActiveClass: 'active',
-			slideVisibleClass: 'visible',
-			spaceBetween: 20,
-			slidesPerView: 1,
-			lazy: true,
-			thumbs: {
-				swiper: productThumbs
-			},
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev'
-			},
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'fraction',
-			}
-		})
-	}
-
-
 	// Filter
 	$('.filter_btn').click(function(e) {
 		e.preventDefault()
@@ -957,6 +994,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 		})
 	}
+
+
+	// Product info slider
+	initProductInfoSlider()
 })
 
 
@@ -1011,6 +1052,10 @@ window.addEventListener('resize', function () {
 		}, 100)
 
 
+		// Product info slider
+		initProductInfoSlider()
+
+
 		// Mob. version
 		if (!fakeResize) {
 			fakeResize = true
@@ -1029,3 +1074,36 @@ window.addEventListener('resize', function () {
 		}
 	}
 })
+
+
+// Product info slider
+function initProductInfoSlider() {
+	if (WW < 480) {
+		if ($('.product_info .images .swiper').length) {
+			$('.product_info .images .swiper .row > *').addClass('swiper-slide')
+			$('.product_info .images .swiper .row').addClass('swiper-wrapper').removeClass('row')
+
+			productSlider = new Swiper('.product_info .images .swiper:not(.swiper-initialized)', {
+				loop: false,
+				speed: 500,
+				watchSlidesProgress: true,
+				slideActiveClass: 'active',
+				slideVisibleClass: 'visible',
+				spaceBetween: 0,
+				slidesPerView: 1,
+				lazy: true,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'fraction',
+				}
+			})
+		}
+	} else {
+		if (typeof productSlider !== 'undefined') {
+			productSlider.destroy(true, true)
+
+			$('.product_info .images .swiper-wrapper').removeClass('swiper-wrapper').addClass('row')
+			$('.product_info .images .swiper .row > *').removeClass('swiper-slide')
+		}
+	}
+}
