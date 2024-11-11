@@ -5544,7 +5544,8 @@ header.fixed ~ .mob_menu
 ------------------*/
 .product_info .images
 {
-    position: relative;
+    position: sticky;
+    top: 100px;
 
     width: calc(100% - 630px);
 }
