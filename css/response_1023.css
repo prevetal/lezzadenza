@@ -437,6 +437,9 @@
     .product_info .share .btn
     {
         padding: 0 16px;
+
+        color: var(--text_color);
+        background: #fff;
     }
 
 

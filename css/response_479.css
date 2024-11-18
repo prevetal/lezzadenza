@@ -374,12 +374,6 @@
     }
 
 
-    .product_info .images .image
-    {
-        pointer-events: none;
-    }
-
-
     .product_info .images .swiper-horizontal > .swiper-pagination-bullets,
     .product_info .images .swiper-pagination-bullets.swiper-pagination-horizontal,
     .product_info .images .swiper-pagination-custom,
@@ -590,5 +584,21 @@
     #filter_modal
     {
         width: 100%;
+    }
+
+
+
+    /*--------------------------
+        Product images modal
+    --------------------------*/
+    #product_images_modal
+    {
+        padding: 0;
+    }
+
+
+    #product_images_modal .images .big .swiper
+    {
+        padding: 0;
     }
 }
