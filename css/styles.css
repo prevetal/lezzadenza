@@ -5542,6 +5542,14 @@ header.fixed ~ .mob_menu
 /*------------------
     Product info
 ------------------*/
+.product_info .cont.row
+{
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+
 .product_info .images
 {
     position: sticky;
@@ -5730,13 +5738,11 @@ header.fixed ~ .mob_menu
 
 .product_info > .cont > .data
 {
-    position: sticky;
+    position: relative;
     z-index: 5;
-    top: 100px;
 
     width: 590px;
     max-width: 100%;
-    margin-left: auto;
 }
 
 

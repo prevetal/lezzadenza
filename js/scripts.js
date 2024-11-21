@@ -527,12 +527,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			accordion = $(this).closest('.accordion')
 
 		if (item.hasClass('active')) {
-			item.removeClass('active').find('.data').slideUp(300)
+			item.removeClass('active').find('.data').slideUp(300, () => $('.product_info .sticky').trigger('sticky_kit:recalc'))
 		} else {
 			accordion.find('.accordion_item').removeClass('active')
 			accordion.find('.data').slideUp(300)
 
-			item.addClass('active').find('.data').slideDown(300)
+			item.addClass('active').find('.data').slideDown(300, () => $('.product_info .sticky').trigger('sticky_kit:recalc'))
 		}
 	})
 
@@ -998,6 +998,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Product info slider
 	initProductInfoSlider()
+
+
+	// Product info sticky
+	if ($('.product_info').length) {
+		let offset = $('header').outerHeight() - 20
+
+		$('.product_info .data .sticky').stick_in_parent({
+			offset_top: offset
+		})
+	}
 })
 
 
